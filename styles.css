@@ -33,7 +33,7 @@
 }
 
 #main-navbar.scrolled #logo {
-    width: 140px !important;          /* Shrunk size – adjust to taste (120–160px) */
+    width: 100px !important;          /* Shrunk size – adjust to taste (120–160px) */
 }
 
 /* Optional: Make text smaller too when scrolled */
