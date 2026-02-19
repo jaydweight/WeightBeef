@@ -2,7 +2,7 @@
 .navbar-brand { font-weight: bold; color: #d32f2f; } /* Red for beef theme */
 .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 .btn-primary { background-color: #8B0203; border-color: #8B0203; }
-.btn:hover { color: var(--bs-btn-hover-color); background-color: #d32f2f; border-color: #d32f2f; }
+.btn:hover { color: var(--bs-btn-hover-color); background-color: #24b773; border-color: #24b773; }
 .hero {
     min-height: 70vh;                /* Takes up most of the viewport height */
     display: flex;
