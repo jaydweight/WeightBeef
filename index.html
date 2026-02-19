@@ -13,13 +13,13 @@
         .product-card { margin-bottom: 30px; }
     </style>
     <script>
-    // Optional: Try to auto-resize iframe (not always perfect due to cross-origin)
-    window.addEventListener('message', function(e) {
-        if (e.data.height) {
-            document.querySelector('iframe').style.height = e.data.height + 'px';
-        }
-    });
-</script>
+        // Optional: Try to auto-resize iframe (not always perfect due to cross-origin)
+        window.addEventListener('message', function(e) {
+            if (e.data.height) {
+                document.querySelector('iframe').style.height = e.data.height + 'px';
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -176,5 +176,16 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scroll shrink script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('main-navbar');
+            if (window.scrollY > 80) {          // Trigger after scrolling ~80px – adjust as needed
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
