@@ -3,6 +3,35 @@
 .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 .btn-primary { background-color: #8B0203; border-color: #8B0203; }
 .btn:hover { color: var(--bs-btn-hover-color); background-color: #d32f2f; border-color: #d32f2f; }
+.hero {
+    min-height: 70vh;                /* Takes up most of the viewport height */
+    display: flex;
+    align-items: center;
+}
+
+.hero-bg {
+    background-image: url('images/hero-ranch-image.jpg');
+    background-size: cover;          /* Fills the section without distortion */
+    background-position: center;     /* Centers the cows/ranch view */
+    background-repeat: no-repeat;
+}
+
+/* Optional: Make it taller on larger screens */
+@media (min-width: 768px) {
+    .hero {
+        min-height: 85vh;
+    }
+}
+
+/* Ensure text stays readable on very small screens */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero .lead {
+        font-size: 1.25rem;
+    }
+}
 /* Right-align mobile menu items */
 @media (max-width: 991.98px) {
     .navbar-nav.ms-auto {
