@@ -19,7 +19,6 @@
 /* Navbar shrink + fixed behavior */
 #main-navbar {
     transition: all 0.3s ease-in-out; /* Smooth change */
-    padding: 1rem 0;                  /* Initial padding */
 }
 
 #main-navbar.scrolled {
