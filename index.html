@@ -11,6 +11,14 @@
         .hero { background-color: #f8f9fa; padding: 60px 0; text-align: center; }
         .product-card { margin-bottom: 30px; }
     </style>
+    <script>
+    // Optional: Try to auto-resize iframe (not always perfect due to cross-origin)
+    window.addEventListener('message', function(e) {
+        if (e.data.height) {
+            document.querySelector('iframe').style.height = e.data.height + 'px';
+        }
+    });
+</script>
 </head>
 <body>
 
