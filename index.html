@@ -146,21 +146,13 @@
                 and getting premium, grass-fed and grain-finished cuts directly to your table—affordable and without the middleman markup.
             </p>
             <!-- Optional: Add more if you want (e.g., bullet points or a small call-to-action) -->
-            <!-- <ul class="list-unstyled mt-4 lead">
+            <ul class="list-unstyled mt-4 lead">
                 <li>Sustainable ranching in the Rockies</li>
                 <li>Direct from ranch to you</li>
                 <li>Venmo-easy ordering</li>
-            </ul> -->
+            </ul>
         </div>
     </section>
-    
-    <!-- About Section -->
-    <!-- <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">About Weight Beef</h2>
-            <p class="text-center">We're a small hobby business raising beef with care. Our cattle are branded with 'W8' for quality you can trust. Focused on sustainable practices and direct-to-consumer sales to keep things affordable.</p>
-        </div>
-    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
@@ -186,7 +178,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
-            <p>&copy; 2026 Weight Beef LLC. All rights reserved.</p>
+            <p>&copy; <span id="copyright-year"></span> Weight Beef LLC. All rights reserved.</p>
         </div>
     </footer>
 
@@ -201,6 +193,10 @@
                 navbar.classList.remove('scrolled');
             }
         });
+    </script>
+    <!-- Auto-update copyright year -->
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
