@@ -16,6 +16,46 @@
     background-repeat: no-repeat;
 }
 
+/* Navbar shrink + fixed behavior */
+#main-navbar {
+    transition: all 0.3s ease-in-out; /* Smooth change */
+    padding: 1rem 0;                  /* Initial padding */
+}
+
+#main-navbar.scrolled {
+    padding: 0.5rem 0;                /* Smaller padding when scrolled */
+    background-color: rgba(255, 255, 255, 0.95) !important; /* Slight transparency or solid */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#logo {
+    transition: width 0.3s ease-in-out;
+}
+
+#main-navbar.scrolled #logo {
+    width: 140px !important;          /* Shrunk size – adjust to taste (120–160px) */
+}
+
+/* Optional: Make text smaller too when scrolled */
+#main-navbar.scrolled .navbar-brand {
+    font-size: 1.1rem;
+}
+
+/* Prevent content jump when navbar becomes fixed */
+body {
+    padding-top: 100px;               /* ≈ initial navbar height – adjust after testing */
+}
+
+/* Mobile adjustments */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 70px;            /* Smaller on mobile */
+    }
+    #main-navbar.scrolled {
+        padding: 0.4rem 0;
+    }
+}
+
 /* Optional: Make it taller on larger screens */
 @media (min-width: 768px) {
     .hero {
