@@ -135,17 +135,13 @@
             <h2 class="text-center mb-5">Featured Reviews</h2>
             <p class="text-center text-muted mb-5">Hear what our customers are saying about their Weight Beef experience. Thank you for the kind words!</p>
     
-            <!-- Featured Reviews Carousel -->
-        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-            
-        
-            <div class="carousel-inner">
-                <!-- Slide 1: Group of cards (active by default) -->
-                <div class="carousel-item active">
-                    <div class="row g-4 justify-content-center">
-                        <!-- Card 1 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm border-0">
+            <!-- Featured Reviews Carousel – one card per slide -->
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -158,10 +154,12 @@
                                 </div>
                             </div>
                         </div>
-        
-                        <!-- Card 2 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm border-0">
+                    </div>
+    
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -174,10 +172,12 @@
                                 </div>
                             </div>
                         </div>
-        
-                        <!-- Card 3 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm border-0">
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -191,24 +191,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Optional Indicators (dots at bottom) – remove if you prefer clean look -->
-                <!-- <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> -->
-                    <!-- Add more buttons if you have more than 2 groups -->
-                <!-- </div> -->
-        
-                <!-- Slide 2: Add more groups here if you have >3 reviews -->
-                <!-- Example placeholder for next group – duplicate & customize when needed -->
-               
-                <div class="carousel-item">
-                    <div class="row g-4 justify-content-center">
-                        <!-- Next 1-3 cards here... -->
-                        <!-- Card 4 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm border-0">
+    
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -221,9 +208,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 1 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm border-0">
+                    </div>
+    
+                    <!-- Slide 5 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -236,39 +226,33 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 3 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 shadow-sm border-0">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <span class="text-warning fs-4">★★★★★</span>
-                                    </div>
-                                    <p class="card-text fst-italic mb-4">
-                                        "We have purchased beef from Jay, and the quality never disappoints! Great service! Go see Jay!!!"
-                                    </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">– Blake L.</h6>
-                                    <small class="text-muted">Pleasant Grove, UT • June 2024</small>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                
-        
-            </div>
-        
-            <!-- Controls: Previous / Next arrows -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
     
-            <!-- Optional: Call to action -->
+                    <!-- Add more carousel-item blocks here for additional reviews -->
+                </div>
+    
+                <!-- Indicators (dots below) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <!-- Add one button per carousel-item -->
+                </div>
+    
+                <!-- Controls (arrows) – hidden per your preference -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    
+            <!-- Call to action -->
             <div class="text-center mt-5">
                 <p class="lead mb-3">Loved your beef? We'd love to feature your review!</p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfWZx5FCn1hcHqow0m6Zjp3V2R_T6dlfn_enF8V0rEf9j4jA/viewform?usp=dialog" class="btn btn-outline-primary" target="_blank">Leave a Review</a>
