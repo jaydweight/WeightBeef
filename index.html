@@ -309,25 +309,69 @@
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
     <!-- Auto-close mobile navbar on nav-link click -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Target all nav links inside the collapse
-        const navLinks = document.querySelectorAll('#navbarNav .nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                // Only hide if the navbar is currently collapsed/visible on mobile
-                const collapseElement = document.querySelector('#navbarNav');
-                if (collapseElement.classList.contains('show')) {
-                    // Use Bootstrap's Collapse API to hide it smoothly
-                    const bsCollapse = new bootstrap.Collapse(collapseElement, {
-                        toggle: false
-                    });
-                    bsCollapse.hide();
-                }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Target all nav links inside the collapse
+            const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Only hide if the navbar is currently collapsed/visible on mobile
+                    const collapseElement = document.querySelector('#navbarNav');
+                    if (collapseElement.classList.contains('show')) {
+                        // Use Bootstrap's Collapse API to hide it smoothly
+                        const bsCollapse = new bootstrap.Collapse(collapseElement, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('#reviewsCarousel');
+            if (!carousel) return;
+    
+            const wrapper = carousel.querySelector('.carousel-inner-wrapper');
+            const cards = carousel.querySelectorAll('.carousel-item-card');
+            const totalCards = cards.length;
+            let currentIndex = 0;
+            const itemsPerView = 3; // Change to 2 or 1 if needed for testing
+    
+            // Clone first few cards at end for seamless loop
+            for (let i = 0; i < itemsPerView; i++) {
+                if (cards[i]) {
+                    wrapper.appendChild(cards[i].cloneNode(true));
+                }
+            }
+    
+            // Next/Prev button logic
+            carousel.querySelector('.carousel-control-next').addEventListener('click', function () {
+                currentIndex++;
+                if (currentIndex >= totalCards) currentIndex = 0;
+                slideTo(currentIndex);
+            });
+    
+            carousel.querySelector('.carousel-control-prev').addEventListener('click', function () {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = totalCards - 1;
+                slideTo(currentIndex);
+            });
+    
+            // Auto-advance (Bootstrap handles data-bs-ride, but we sync our index)
+            carousel.addEventListener('slid.bs.carousel', function () {
+                // Optional: sync if needed
+            });
+    
+            function slideTo(index) {
+                const shift = - (index * (100 / itemsPerView));
+                wrapper.style.transform = `translateX(${shift}%)`;
+            }
+    
+            // Auto-slide is handled by Bootstrap's data-bs-interval
+        });
+    </script>
 </body>
 </html>
