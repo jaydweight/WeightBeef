@@ -74,6 +74,17 @@ body {
     padding-bottom: 8rem !important;
 }
 
+/* Completely hide the prev/next arrows */
+#reviewsCarousel .carousel-control-prev,
+#reviewsCarousel .carousel-control-next {
+    display: none;
+}
+
+/* Optional: Also hide the indicators/dots if you want a fully automatic, no-interaction look */
+#reviewsCarousel .carousel-indicators {
+    display: none;
+}
+
 /* Move indicators below the carousel and style them better */
 #reviewsCarousel .carousel-indicators {
     position: relative;           /* Change from absolute to relative */
