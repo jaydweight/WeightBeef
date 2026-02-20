@@ -131,132 +131,111 @@
 
     <!-- Featured Reviews Section -->
     <section id="reviews" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Reviews</h2>
-            <p class="text-center text-muted mb-5">Hear what our customers are saying about their Weight Beef experience. Thank you for the kind words!</p>
-    
-            <!-- Featured Reviews Carousel – one card per slide -->
-            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center">
-                            <div class="card shadow-sm border-0 review-card">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <span class="text-warning fs-4">★★★★★</span>
-                                    </div>
-                                    <p class="card-text fst-italic mb-4">
-                                        "We’ve bought our beef with Weight Beef for multiple years now. Excellent quality, consistently tasty. Not to mention they’ve been kind, responsive, and easy to work with! Will definitely be ordering through them again."
-                                    </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">– Kyle C.</h6>
-                                    <small class="text-muted">Pleasant Grove, UT • June 2023</small>
+        <!-- Featured Reviews Carousel – 3 visible, slide 1 at a time -->
+        <div id="reviewsCarousel" class="carousel slide multi-item-carousel" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="carousel-inner">
+                <!-- All cards wrapped in a single flex container for sliding -->
+                <div class="carousel-inner-wrapper d-flex">
+                    <!-- Review Card 1 -->
+                    <div class="carousel-item-card">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="text-warning fs-4">★★★★★</span>
                                 </div>
+                                <p class="card-text fst-italic mb-4">
+                                    "We’ve bought our beef with Weight Beef for multiple years now. Excellent quality, consistently tasty. Not to mention they’ve been kind, responsive, and easy to work with! Will definitely be ordering through them again."
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted">– Kyle C.</h6>
+                                <small class="text-muted">Pleasant Grove, UT • June 2023</small>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="card shadow-sm border-0 review-card">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <span class="text-warning fs-4">★★★★★</span>
-                                    </div>
-                                    <p class="card-text fst-italic mb-4">
-                                        "The ground beef is incredible for burgers and chili. Easy ordering via Venmo and pickup was smooth. Supporting local never tasted so good!"
-                                    </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">– Mel P.</h6>
-                                    <small class="text-muted">Clinton, UT • June 2023</small>
+        
+                    <!-- Review Card 2 -->
+                    <div class="carousel-item-card">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="text-warning fs-4">★★★★★</span>
                                 </div>
+                                <p class="card-text fst-italic mb-4">
+                                    "The ground beef is incredible for burgers and chili. Easy ordering via Venmo and pickup was smooth. Supporting local never tasted so good!"
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted">– Mel P.</h6>
+                                <small class="text-muted">Clinton, UT • June 2023</small>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="card shadow-sm border-0 review-card">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <span class="text-warning fs-4">★★★★★</span>
-                                    </div>
-                                    <p class="card-text fst-italic mb-4">
-                                        "We have purchased beef from Jay, and the quality never disappoints! Great service! Go see Jay!!!"
-                                    </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">– Blake L.</h6>
-                                    <small class="text-muted">Pleasant Grove, UT • June 2024</small>
+        
+                    <!-- Review Card 3 -->
+                    <div class="carousel-item-card">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="text-warning fs-4">★★★★★</span>
                                 </div>
+                                <p class="card-text fst-italic mb-4">
+                                    "We have purchased beef from Jay, and the quality never disappoints! Great service! Go see Jay!!!"
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted">– Blake L.</h6>
+                                <small class="text-muted">Pleasant Grove, UT • June 2024</small>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Slide 4 -->
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="card shadow-sm border-0 review-card">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <span class="text-warning fs-4">★★★★★</span>
-                                    </div>
-                                    <p class="card-text fst-italic mb-4">
-                                        "Weight Beef is the best beef! They are easy to order from and take the time to answer questions. Every delivery has been full of high quality beef. We highly recommend them!"
-                                    </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">– DeAnne F.</h6>
-                                    <small class="text-muted">Kaysville, UT • June 2023</small>
+        
+                    <!-- Review Card 4 -->
+                    <div class="carousel-item-card">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="text-warning fs-4">★★★★★</span>
                                 </div>
+                                <p class="card-text fst-italic mb-4">
+                                    "Weight Beef is the best beef! They are easy to order from and take the time to answer questions. Every delivery has been full of high quality beef. We highly recommend them!"
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted">– DeAnne F.</h6>
+                                <small class="text-muted">Kaysville, UT • June 2023</small>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Slide 5 -->
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="card shadow-sm border-0 review-card">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <span class="text-warning fs-4">★★★★★</span>
-                                    </div>
-                                    <p class="card-text fst-italic mb-4">
-                                        "My husband and I have thoroughly enjoyed Weight's Beef! To any one who is thinking about going through them, you will not be disappointed. They have high standards when it comes to the quality of their grass fed beef."
-                                    </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">– The Burnett Family</h6>
-                                    <small class="text-muted">Pleasant Grove, UT • April 2023</small>
+        
+                    <!-- Review Card 5 -->
+                    <div class="carousel-item-card">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="text-warning fs-4">★★★★★</span>
                                 </div>
+                                <p class="card-text fst-italic mb-4">
+                                    "My husband and I have thoroughly enjoyed Weight's Beef! To any one who is thinking about going through them, you will not be disappointed. They have high standards when it comes to the quality of their grass fed beef."
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted">– The Burnett Family</h6>
+                                <small class="text-muted">Pleasant Grove, UT • April 2023</small>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- Add more carousel-item blocks here for additional reviews -->
+        
+                    <!-- Add more .carousel-item-card divs here as needed -->
                 </div>
-    
-                <!-- Indicators (dots below) -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <!-- Add one button per carousel-item -->
-                </div>
-    
-                <!-- Controls (arrows) – hidden per your preference -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-    
-            <!-- Call to action -->
-            <div class="text-center mt-5">
-                <p class="lead mb-3">Loved your beef? We'd love to feature your review!</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfWZx5FCn1hcHqow0m6Zjp3V2R_T6dlfn_enF8V0rEf9j4jA/viewform?usp=dialog" class="btn btn-outline-primary" target="_blank">Leave a Review</a>
+        
+            <!-- Indicators (dots) -->
+            <div class="carousel-indicators">
+                <!-- Dynamically add or manually match to number of cards / step size; for simplicity, keep as-is or hide if preferred -->
+                <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <!-- Add more as needed, but note: indicators are approximate with this method -->
             </div>
+        
+            <!-- Controls (hidden per your preference) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
