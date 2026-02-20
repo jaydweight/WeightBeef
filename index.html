@@ -135,14 +135,13 @@
             <h2 class="text-center mb-5">Featured Reviews</h2>
             <p class="text-center text-muted mb-5">Hear what our customers are saying about their Weight Beef experience. Thank you for the kind words!</p>
     
-            <!-- Featured Reviews Carousel – 3 visible, slide 1 at a time -->
-            <div id="reviewsCarousel" class="carousel slide multi-item-carousel" data-bs-ride="carousel" data-bs-interval="8000">
+            <!-- Featured Reviews Carousel – 3 visible, slide 1 at a time, auto-rotates reliably -->
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
                 <div class="carousel-inner">
-                    <!-- All cards wrapped in a single flex container for sliding -->
-                    <div class="carousel-inner-wrapper d-flex">
-                        <!-- Review Card 1 -->
-                        <div class="carousel-item-card">
-                            <div class="card h-100 shadow-sm border-0">
+                    <!-- Each review is its own carousel-item -->
+                    <div class="carousel-item active">
+                        <div class="review-slide d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card mx-2">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -155,10 +154,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
             
-                        <!-- Review Card 2 -->
-                        <div class="carousel-item-card">
-                            <div class="card h-100 shadow-sm border-0">
+                    <div class="carousel-item">
+                        <div class="review-slide d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card mx-2">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -171,10 +171,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
             
-                        <!-- Review Card 3 -->
-                        <div class="carousel-item-card">
-                            <div class="card h-100 shadow-sm border-0">
+                    <div class="carousel-item">
+                        <div class="review-slide d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card mx-2">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -187,10 +188,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
             
-                        <!-- Review Card 4 -->
-                        <div class="carousel-item-card">
-                            <div class="card h-100 shadow-sm border-0">
+                    <div class="carousel-item">
+                        <div class="review-slide d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card mx-2">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -203,10 +205,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
             
-                        <!-- Review Card 5 -->
-                        <div class="carousel-item-card">
-                            <div class="card h-100 shadow-sm border-0">
+                    <div class="carousel-item">
+                        <div class="review-slide d-flex justify-content-center">
+                            <div class="card shadow-sm border-0 review-card mx-2">
                                 <div class="card-body text-center">
                                     <div class="mb-3">
                                         <span class="text-warning fs-4">★★★★★</span>
@@ -219,19 +222,22 @@
                                 </div>
                             </div>
                         </div>
-            
-                        <!-- Add more .carousel-item-card divs here as needed -->
                     </div>
+            
+                    <!-- Add more <div class="carousel-item"> blocks for additional reviews -->
                 </div>
             
-                <!-- Indicators (dots) -->
+                <!-- Indicators (dots) – one per card/slide -->
                 <div class="carousel-indicators">
-                    <!-- Dynamically add or manually match to number of cards / step size; for simplicity, keep as-is or hide if preferred -->
                     <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <!-- Add more as needed, but note: indicators are approximate with this method -->
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <!-- Add one button per carousel-item -->
                 </div>
             
-                <!-- Controls (hidden per your preference) -->
+                <!-- Controls (hidden per your earlier preference) -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
