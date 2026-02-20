@@ -324,3 +324,51 @@ body {
 .review-card {
     min-height: 340px;  /* Prevent height jump between cards */
 }
+
+/* Multi-visible carousel – 3 cards at once, slide one by one */
+.multi-visible-carousel .carousel-inner {
+    overflow: hidden;
+}
+
+.multi-visible-carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* space between visible cards */
+    transition: transform 0.6s ease;
+}
+
+.review-card {
+    flex: 0 0 30%;              /* 3 across with gap */
+    max-width: 380px;           /* reasonable max width */
+    min-height: 340px;          /* consistent height */
+}
+
+/* Tablet: 2 visible */
+@media (max-width: 991.98px) {
+    .multi-visible-carousel .carousel-item {
+        gap: 1rem;
+    }
+    .review-card {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+/* Mobile: 1 visible, stack vertically */
+@media (max-width: 767.98px) {
+    .multi-visible-carousel .carousel-item {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .review-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+}
+
+/* Polish */
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
