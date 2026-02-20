@@ -74,6 +74,29 @@ body {
     padding-bottom: 8rem !important;
 }
 
+/* Carousel tweaks for reviews */
+#reviewsCarousel .carousel-item .row {
+    margin: 0 auto;
+    max-width: 1200px; /* Optional: cap width on very wide screens */
+}
+
+#reviewsCarousel .card {
+    transition: transform 0.3s ease; /* Subtle lift on hover if wanted */
+}
+
+#reviewsCarousel .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Make arrows larger/better visible */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
 /* Mobile adjustments */
 @media (max-width: 991.98px) {
     body {
