@@ -136,61 +136,6 @@ body {
     height: 3rem;
 }
 
-/* Push prev/next controls outside the cards/content */
-#reviewsCarousel .carousel-control-prev,
-#reviewsCarousel .carousel-control-next {
-    width: 5%;                    /* Wider hit area – makes arrows easier to click */
-    opacity: 0.8;                 /* Slightly see-through so they don't dominate */
-}
-
-/* Move prev arrow further left */
-#reviewsCarousel .carousel-control-prev {
-    left: -5%;                    /* Negative value pushes it outside – adjust -3% to -8% as needed */
-}
-
-/* Move next arrow further right */
-#reviewsCarousel .carousel-control-next {
-    right: -5%;                   /* Same idea – tweak to taste */
-}
-
-/* Make icons larger/better visible and centered vertically */
-#reviewsCarousel .carousel-control-prev-icon,
-#reviewsCarousel .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent dark bg for contrast */
-    border-radius: 50%;
-    width: 3.5rem;                /* Bigger arrows */
-    height: 3.5rem;
-    background-size: 60%;         /* Slightly smaller icon inside bg */
-}
-
-/* Optional: Hover effect for better UX */
-#reviewsCarousel .carousel-control-prev:hover,
-#reviewsCarousel .carousel-control-next:hover {
-    opacity: 1;
-}
-
-#reviewsCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
-#reviewsCarousel .carousel-control-next:hover .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Ensure the carousel container has enough side padding/margin so controls don't clip off-screen on very narrow views */
-#reviewsCarousel {
-    position: relative;
-    margin: 0 -1rem;              /* Negative margin to let controls extend outward */
-    padding: 0 1rem;              /* Counteracts negative margin inside container */
-}
-
-/* On mobile: Pull controls back in a bit to avoid edge clipping */
-@media (max-width: 767px) {
-    #reviewsCarousel .carousel-control-prev {
-        left: -2%;
-    }
-    #reviewsCarousel .carousel-control-next {
-        right: -2%;
-    }
-}
-
 /* Mobile adjustments */
 @media (max-width: 991.98px) {
     body {
