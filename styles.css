@@ -245,3 +245,45 @@ body {
 .multi-item-carousel .carousel-item-card .card:hover {
     transform: translateY(-8px);
 }
+/* Make 3 cards visible at once on larger screens */
+.review-slide {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between visible cards */
+}
+
+.review-card {
+    flex: 0 0 30%;              /* ~33% width for 3 across + gap */
+    max-width: 380px;           /* Cap card width – adjust to taste */
+    min-height: 320px;          /* Consistent height to avoid jump */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 991.98px) {
+    .review-slide {
+        gap: 1rem;
+    }
+    .review-card {
+        flex: 0 0 45%;          /* 2 visible on tablet */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .review-slide {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-card {
+        flex: 0 0 90%;          /* 1 visible on mobile */
+        max-width: 90%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Extra polish */
+.review-card:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
