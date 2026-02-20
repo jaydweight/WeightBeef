@@ -181,3 +181,47 @@ body {
         padding-right: 20px;
     }
 }
+
+/* On large screens: show 3 cards side-by-side */
+@media (min-width: 992px) {
+    #reviewsCarousel .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1.5rem; /* space between cards */
+    }
+
+    #reviewsCarousel .carousel-item .col-md-6.col-lg-4 {
+        flex: 0 0 33.333%;      /* exactly 1/3 width */
+        max-width: 33.333%;
+        padding: 0 10px;        /* inner spacing */
+    }
+}
+
+/* On mobile (below lg breakpoint): force single card view */
+@media (max-width: 991.98px) {
+    #reviewsCarousel .carousel-item .row {
+        display: block;                 /* no flex row */
+    }
+
+    #reviewsCarousel .carousel-item .col-md-6.col-lg-4 {
+        width: 100%;                    /* full width */
+        max-width: 100%;
+        margin-bottom: 1.5rem;          /* space between stacked cards */
+    }
+
+    /* Make sure only one card is visible at a time */
+    #reviewsCarousel .carousel-item {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    #reviewsCarousel .carousel-item.active {
+        opacity: 1;
+    }
+
+    /* Hide non-active cards completely on mobile */
+    #reviewsCarousel .carousel-item:not(.active) {
+        display: none;
+    }
+}
