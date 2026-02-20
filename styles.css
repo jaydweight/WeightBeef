@@ -110,7 +110,6 @@ body {
     background-color: #0d6efd;    /* Bootstrap primary blue – or use your accent color e.g. #198754 for green */
     opacity: 1;
     transform: scale(1.3);        /* Slightly bigger active dot */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 /* Extra space at bottom of carousel items so dots aren't too close to cards */
