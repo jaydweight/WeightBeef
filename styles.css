@@ -287,3 +287,40 @@ body {
     transition: transform 0.3s ease;
     box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
+.multi-slide-carousel .carousel-inner {
+    overflow: hidden;
+}
+
+.multi-slide-carousel .carousel-wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    width: max-content; /* Allows more than 100% width */
+}
+
+.multi-slide-carousel .carousel-card {
+    flex: 0 0 33.333%;           /* 3 visible on lg+ */
+    max-width: 33.333%;
+    padding: 0 12px;             /* Gap between cards */
+    box-sizing: border-box;
+}
+
+/* Tablet: 2 visible */
+@media (max-width: 991.98px) {
+    .multi-slide-carousel .carousel-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Mobile: 1 visible */
+@media (max-width: 767.98px) {
+    .multi-slide-carousel .carousel-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.review-card {
+    min-height: 340px;  /* Prevent height jump between cards */
+}
