@@ -345,5 +345,26 @@
     <script>
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
+    <!-- Auto-close mobile navbar on nav-link click -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Target all nav links inside the collapse
+        const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Only hide if the navbar is currently collapsed/visible on mobile
+                const collapseElement = document.querySelector('#navbarNav');
+                if (collapseElement.classList.contains('show')) {
+                    // Use Bootstrap's Collapse API to hide it smoothly
+                    const bsCollapse = new bootstrap.Collapse(collapseElement, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
