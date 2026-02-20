@@ -81,9 +81,9 @@ body {
 }
 
 /* Optional: Also hide the indicators/dots if you want a fully automatic, no-interaction look */
-#reviewsCarousel .carousel-indicators {
+/* #reviewsCarousel .carousel-indicators {
     display: none;
-}
+} */
 
 /* Move indicators below the carousel and style them better */
 #reviewsCarousel .carousel-indicators {
