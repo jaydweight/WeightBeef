@@ -146,6 +146,19 @@ body {
     height: 3rem;
 }
 
+#market-insights {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+#market-insights table th {
+    background-color: #8B0203; /* Your red theme */
+    color: white;
+}
+
+#market-insights .table-success {
+    background-color: rgba(40, 167, 69, 0.15) !important; /* Light green for positive diffs */
+}
+
 /* Mobile adjustments */
 @media (max-width: 991.98px) {
     body {
