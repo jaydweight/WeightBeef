@@ -82,58 +82,111 @@
                 Choose from our portioned beef options. All include a mix of steaks, roasts, brisket, ground, and more. 
                 Prices beat grocery stores—save big!
             </p>
-            <p class="text-center mb-4">Ordering is easy! Call or text Jay at (801) 830-0748, or <a href="#contact">fill out the order form</a> below.</p>
             <p class="text-center mb-5 fw-light fst-italic">
                 And as always, thank you for choosing local and supporting our small beef business.
             </p>
-            <div class="row">
+            <!-- Disclaimer -->
+            <p class="text-center text-muted small mb-5">
+                <strong>*Weights are approximate estimates</strong> based on typical yields. Actual amounts can vary due to natural differences in animal size, processing choices, and trimming.
+            </p>
+    
+            <!-- Beef Boxes – Cards on desktop, Accordion on mobile -->
+            <div class="row g-4">
                 <!-- 1/8 Beef -->
                 <div class="col-md-6 col-lg-3 product-card">
-                    <div class="card h-100">
-                        <img src="images/eighth-beef.jpg" class="card-img-top" alt="1/8 Beef Box" width="100">
-                        <div class="card-body">
-                            <h5 class="card-title">1/8 Beef</h5>
-                            <p class="card-text"><strong>Fits nicely in a top-mount freezer.</strong><br>This share includes roughly 2-3 T-bone Steaks, 2-3 Rib Steaks, 2 Top Sirloin Steaks (or Sirloin Tip Roasts), 2-3 roasts (Arm, Top, Bottom, Round, and/or Chuck), plus a good amount of Ground Beef.
-Breakdown: ~20-25% steaks, ~25-35% roasts and mixed cuts (Short Ribs, Stew Meat, etc.), ~40-50% Ground Beef.</p>
-                            <p><strong>Our Price: $597</strong><br>Save about $60 compared to typical grocery store prices!</p>
+                    <div class="accordion d-lg-block" id="accordion1-8">
+                        <div class="accordion-item border-0 shadow-sm">
+                            <!-- Always-visible header (title + image + price) -->
+                            <h2 class="accordion-header" id="heading1-8">
+                                <button class="accordion-button collapsed d-flex flex-column align-items-center text-center p-0 bg-white border-0" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-8" aria-expanded="false" aria-controls="collapse1-8">
+                                    <img src="images/eighth-beef.jpg" class="card-img-top rounded mb-3" alt="1/8 Beef Box" style="max-height: 200px; object-fit: cover;">
+                                    <h5 class="card-title mb-2">1/8 Beef</h5>
+                                    <p class="fw-bold mb-2">$597</p>
+                                    <small class="text-muted">Save ~$60 vs grocery</small>
+                                </button>
+                            </h2>
+                            <!-- Collapsible details (hidden on mobile until clicked) -->
+                            <div id="collapse1-8" class="accordion-collapse collapse d-lg-block" aria-labelledby="heading1-8" data-bs-parent="#accordion1-8">
+                                <div class="accordion-body text-center">
+                                    <p>Fits nicely in a top-mount freezer.</p>
+                                    <p>Includes roughly 2-3 T-bone Steaks, 2-3 Rib Steaks, 2 Top Sirloin Steaks (or Sirloin Tip Roasts), 2-3 roasts (Arm, Top, Bottom, Round, and/or Chuck), plus a good amount of Ground Beef.</p>
+                                    <p class="small"><strong>Breakdown:</strong> ~20-25% steaks, ~25-35% roasts and mixed cuts (Short Ribs, Stew Meat, etc.), ~40-50% Ground Beef.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- 1/4 Beef -->
+    
+                <!-- 1/4 Beef – repeat pattern -->
                 <div class="col-md-6 col-lg-3 product-card">
-                    <div class="card h-100">
-                        <img src="images/quarter-beef.jpg" class="card-img-top" alt="1/4 Beef Box" width="100">
-                        <div class="card-body">
-                            <h5 class="card-title">1/4 Beef</h5>
-                            <p class="card-text"><strong>Takes up roughly half a small chest freezer.</strong><br>You’ll get a solid selection including T-bone Steaks, Rib Steaks, Tenderloin Filets, Sirloin Steaks, several 2-3 lb roasts (Arm, Top, Bottom, and/or Chuck), Brisket, Beef Shanks, Stew Meat, Short Ribs, and plenty of Ground Beef. Breakdown: ~25% steaks, ~35% roasts and assorted cuts (Stew Meat, Short Ribs, etc.), ~40% Ground Beef.</p>
-                            <p><strong>Our Price: $1,097</strong><br>Save around $150 compared to grocery store prices!</p>
+                    <div class="accordion d-lg-block" id="accordion1-4">
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="heading1-4">
+                                <button class="accordion-button collapsed d-flex flex-column align-items-center text-center p-0 bg-white border-0" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-4" aria-expanded="false" aria-controls="collapse1-4">
+                                    <img src="images/quarter-beef.jpg" class="card-img-top rounded mb-3" alt="1/4 Beef Box" style="max-height: 200px; object-fit: cover;">
+                                    <h5 class="card-title mb-2">1/4 Beef</h5>
+                                    <p class="fw-bold mb-2">$1,097</p>
+                                    <small class="text-muted">Save ~$150 vs grocery</small>
+                                </button>
+                            </h2>
+                            <div id="collapse1-4" class="accordion-collapse collapse d-lg-block" aria-labelledby="heading1-4" data-bs-parent="#accordion1-4">
+                                <div class="accordion-body text-center">
+                                    <p>Takes up roughly half a small chest freezer.</p>
+                                    <p>Includes T-bone Steaks, Rib Steaks, Tenderloin Filets, Sirloin Steaks, several 2-3 lb roasts (Arm, Top, Bottom, and/or Chuck), Brisket, Beef Shanks, Stew Meat, Short Ribs, and plenty of Ground Beef.</p>
+                                    <p class="small"><strong>Breakdown:</strong> ~25% steaks, ~35% roasts and assorted cuts (Stew Meat, Short Ribs, etc.), ~40% Ground Beef.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+    
                 <!-- 1/2 Beef -->
                 <div class="col-md-6 col-lg-3 product-card">
-                    <div class="card h-100">
-                        <img src="images/half-beef.jpg" class="card-img-top" alt="1/2 Beef Box" width="100">
-                        <div class="card-body">
-                            <h5 class="card-title">1/2 Beef</h5>
-                            <p class="card-text"><strong>You'll need about half of a large freezer for this one.</strong><br>A generous share totaling approximately 220 lbs of assorted cuts, featuring steaks, roasts, brisket, and ground beef—perfect for stocking up.</p>
-                            <p><strong>Our Price: $2,197</strong><br>Save roughly $300 compared to grocery store prices!</p>
+                    <div class="accordion d-lg-block" id="accordion1-2">
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="heading1-2">
+                                <button class="accordion-button collapsed d-flex flex-column align-items-center text-center p-0 bg-white border-0" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse1-2" aria-expanded="false" aria-controls="collapse1-2">
+                                    <img src="images/half-beef.jpg" class="card-img-top rounded mb-3" alt="1/2 Beef Box" style="max-height: 200px; object-fit: cover;">
+                                    <h5 class="card-title mb-2">1/2 Beef</h5>
+                                    <p class="fw-bold mb-2">$2,197</p>
+                                    <small class="text-muted">Save ~$300 vs grocery</small>
+                                </button>
+                            </h2>
+                            <div id="collapse1-2" class="accordion-collapse collapse d-lg-block" aria-labelledby="heading1-2" data-bs-parent="#accordion1-2">
+                                <div class="accordion-body text-center">
+                                    <p>You'll need about half of a large freezer for this one.</p>
+                                    <p>A generous share totaling approximately 220 lbs of assorted cuts, featuring steaks, roasts, brisket, and ground beef—perfect for stocking up.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+    
                 <!-- Whole Beef -->
                 <div class="col-md-6 col-lg-3 product-card">
-                    <div class="card h-100">
-                        <img src="images/whole-beef.jpg" class="card-img-top" alt="Whole Beef Box" width="100">
-                        <div class="card-body">
-                            <h5 class="card-title">Whole Beef</h5>
-                            <p class="card-text"><strong>Takes up most of a standard 20 cu ft freezer.</strong><br>The full deal—a complete beef at an excellent value, loaded with steaks, roasts, brisket, ground beef, and everything in between. Great for larger families or serious meat lovers.</p>
-                            <p><strong>Our Price: $4,347</strong><br>Save about $800 compared to grocery store prices!</p>
+                    <div class="accordion d-lg-block" id="accordionWhole">
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingWhole">
+                                <button class="accordion-button collapsed d-flex flex-column align-items-center text-center p-0 bg-white border-0" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhole" aria-expanded="false" aria-controls="collapseWhole">
+                                    <img src="images/whole-beef.jpg" class="card-img-top rounded mb-3" alt="Whole Beef Box" style="max-height: 200px; object-fit: cover;">
+                                    <h5 class="card-title mb-2">Whole Beef</h5>
+                                    <p class="fw-bold mb-2">$4,347</p>
+                                    <small class="text-muted">Save ~$800 vs grocery</small>
+                                </button>
+                            </h2>
+                            <div id="collapseWhole" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingWhole" data-bs-parent="#accordionWhole">
+                                <div class="accordion-body text-center">
+                                    <p>Takes up most of a standard 20 cu ft freezer.</p>
+                                    <p>The full deal—a complete beef at an excellent value, loaded with steaks, roasts, brisket, ground beef, and everything in between. Great for larger families or serious meat lovers.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Disclaimer footnote right after products -->
-            <p class="text-center text-muted small mb-5"><strong>*Weights are approximate estimates</strong> based on typical yields. Actual amounts can vary due to natural differences in animal size, processing choices, and trimming.</p>
             </div>
         </div>
     </section>
