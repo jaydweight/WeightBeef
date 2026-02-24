@@ -161,6 +161,30 @@ body {
     background-color: rgba(40, 167, 69, 0.15) !important; /* Light green for positive diffs */
 }
 
+/* Hover effect for product cards */
+.product-card .card {
+    transition: all 0.3s ease;           /* Smooth transition */
+    border: 1px solid #dee2e6;           /* Subtle gray border (optional – remove if you prefer no border) */
+    background-color: #fff;              /* Ensures clean white bg */
+}
+
+.product-card .card:hover {
+    transform: translateY(-8px);         /* Lift up slightly */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);  /* Softer, deeper shadow */
+    border-color: #8B0203;               /* Your red theme color for border on hover */
+}
+
+/* Optional: Make title and price bolder/pop on hover */
+.product-card .card:hover .card-title {
+    color: #8B0203;                      /* Your red color */
+    font-weight: 700;                    /* Bolder heading */
+}
+
+.product-card .card:hover .fw-bold {
+    color: #8B0203;                      /* Make price pop in red */
+    font-weight: 800;                    /* Extra bold for price */
+}
+
 /* Mobile adjustments */
 @media (max-width: 991.98px) {
     body {
