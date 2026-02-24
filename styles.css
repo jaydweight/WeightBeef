@@ -235,3 +235,29 @@ body {
         object-fit: cover;
     }
 }
+
+/* Mobile: inside the active carousel item, hide all cards except the first one */
+@media (max-width: 767.98px) {
+    #reviewsCarousel .carousel-item.active .row .col-md-6.col-lg-4 {
+        display: none !important;
+    }
+
+    #reviewsCarousel .carousel-item.active .row .col-md-6.col-lg-4:first-child {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Center and size the visible card */
+    #reviewsCarousel .carousel-item.active .row .col-md-6.col-lg-4:first-child .card {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    /* Optional: bigger image for single-card mobile view */
+    #reviewsCarousel .carousel-item .card-img-top {
+        max-height: 260px;
+        object-fit: cover;
+    }
+}
