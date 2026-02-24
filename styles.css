@@ -201,3 +201,36 @@ body {
     }
 }
 
+/* Mobile: show only one card at a time in the carousel */
+@media (max-width: 767.98px) {
+    #reviewsCarousel .carousel-item {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    #reviewsCarousel .carousel-item.active {
+        display: block !important;
+        opacity: 1;
+    }
+
+    /* Make sure the single card is centered and takes full width */
+    #reviewsCarousel .carousel-item .row {
+        display: block;
+        text-align: center;
+    }
+
+    #reviewsCarousel .carousel-item .col-md-6.col-lg-4 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 1.5rem auto;
+        padding: 0 15px;
+    }
+
+    /* Optional: Make image larger on mobile single view */
+    #reviewsCarousel .carousel-item .card-img-top {
+        max-height: 240px;
+        object-fit: cover;
+    }
+}
+
