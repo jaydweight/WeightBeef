@@ -566,5 +566,23 @@
             setActiveLink(); // initial call
         });
     </script>
+    <!-- Auto-close offcanvas menu on nav link click (mobile) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Target all nav links inside the offcanvas
+            const navLinks = document.querySelectorAll('#offcanvasNavbar .nav-link');
+            const offcanvasElement = document.getElementById('offcanvasNavbar');
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Only run if offcanvas is open (visible on mobile)
+                    if (offcanvasElement.classList.contains('show')) {
+                        const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+                        bsOffcanvas.hide();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
