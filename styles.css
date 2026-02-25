@@ -9,6 +9,13 @@
     align-items: center;
 }
 
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.active:hover {
+    font-weight: bold !important;
+    color: #8B0203 !important;        /* your red theme color, or keep Bootstrap default */
+    border-bottom: 2px solid #8B0203; /* optional underline for extra visibility */
+}
+
 .hero-bg {
     background-image: url('images/hero-ranch-image.jpg');
     background-size: cover;          /* Fills the section without distortion */
