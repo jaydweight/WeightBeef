@@ -292,7 +292,7 @@ body {
 /* Mobile: slightly smaller images to reduce scrolling */
 @media (max-width: 767.98px) {
     .product-card .card-img-top {
-        height: 240px;          /* A bit shorter on phones */
+        height: 260px;          /* A bit shorter on phones */
     }
 }
 
