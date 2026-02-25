@@ -504,5 +504,35 @@
         });
     });
 </script>
+    <!-- Active nav link on scroll -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+
+        function setActiveLink() {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // offset for fixed navbar height + buffer
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Run on load and on scroll
+        window.addEventListener('scroll', setActiveLink);
+        setActiveLink(); // initial call
+    });
+</script>
 </body>
 </html>
