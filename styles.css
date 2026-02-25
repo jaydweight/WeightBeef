@@ -301,3 +301,26 @@ body {
     transform: scale(1.05);     /* Gentle zoom on hover */
     transition: transform 0.4s ease;
 }
+
+/* Remove hover effect on mobile (screens < 768px) */
+@media (max-width: 767.98px) {
+    .product-card .card {
+        transition: none !important;      /* No animation */
+        transform: none !important;       /* No lift */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;  /* Keep original shadow only */
+        border: 1px solid #dee2e6 !important;              /* Keep original border */
+    }
+
+    .product-card .card:hover,
+    .product-card .card:active {
+        transform: none !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+        border-color: #dee2e6 !important;
+    }
+
+    /* Optional: Make images feel taller/fuller on mobile */
+    .product-card .card-img-top {
+        height: 260px !important;         /* Slightly taller than before */
+        object-fit: cover !important;
+    }
+}
