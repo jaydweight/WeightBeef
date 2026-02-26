@@ -273,10 +273,3 @@ body {
     }
 }
 
-/* Larger, consistent product images */
-.product-card .card-img-top {
-    height: 280px;              /* Fixed height for uniformity */
-    object-fit: cover;          /* Crops without stretching */
-    width: 100%;                /* Full width */
-}
-
