@@ -545,24 +545,44 @@
             setActiveLink(); // initial call
         });
     </script>
-    <!-- Auto-close offcanvas menu on nav link click (mobile) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Target all nav links inside the offcanvas
-            const navLinks = document.querySelectorAll('#offcanvasNavbar .nav-link');
-            const offcanvasElement = document.getElementById('offcanvasNavbar');
-    
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    // Only run if offcanvas is open (visible on mobile)
-                    if (offcanvasElement.classList.contains('show')) {
-                        const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
-                        bsOffcanvas.hide();
-                    }
-                });
-            });
+    <!-- Auto-close offcanvas menu on nav link click or scroll (mobile) -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const offcanvasEl = document.getElementById('offcanvasNavbar');
+    if (!offcanvasEl) return;
+
+    // Close on nav link click
+    const navLinks = offcanvasEl.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Small delay so scroll starts first
+            setTimeout(() => {
+                const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+                if (offcanvas) offcanvas.hide();
+            }, 100);
         });
-    </script>
+    });
+
+    // Force close button to work
+    const closeBtn = offcanvasEl.querySelector('.btn-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+            if (offcanvas) offcanvas.hide();
+        });
+    }
+
+    // Suggestion 4: Force close if user scrolls the page while menu is open
+    window.addEventListener('scroll', function () {
+        if (offcanvasEl.classList.contains('show')) {
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+            if (offcanvas) {
+                offcanvas.hide();
+            }
+        }
+    });
+});
+</script>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const offcanvasEl = document.getElementById('offcanvasNavbar');
