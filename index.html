@@ -563,5 +563,32 @@
             });
         });
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const offcanvasEl = document.getElementById('offcanvasNavbar');
+        if (!offcanvasEl) return;
+    
+        // Close on any nav link click
+        const navLinks = offcanvasEl.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Let the scroll happen first (small delay)
+                setTimeout(() => {
+                    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+                    offcanvas.hide();
+                }, 100);  // 100ms delay helps smooth scroll + close
+            });
+        });
+    
+        // Optional: Ensure close button works even if Bootstrap misses it
+        const closeBtn = offcanvasEl.querySelector('.btn-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+                if (offcanvas) offcanvas.hide();
+            });
+        }
+    });
+    </script>
 </body>
 </html>
