@@ -280,10 +280,3 @@ body {
     width: 100%;                /* Full width */
 }
 
-/* Mobile: slightly smaller images to reduce scrolling */
-@media (max-width: 767.98px) {
-    .product-card .card-img-top {
-        height: 470px !important;          /* A bit shorter on phones */
-    }
-}
-
