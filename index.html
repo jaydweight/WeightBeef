@@ -515,35 +515,40 @@
     <script>
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
-    <!-- Active nav link on scroll -->
+    <!-- Active nav link on scroll (works with offcanvas) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+    document.addEventListener('DOMContentLoaded', function () {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#offcanvasNavbar .nav-link, .navbar-nav .nav-link');
     
-            function setActiveLink() {
-                let current = '';
+        function setActiveLink() {
+            let current = '';
     
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 150; // offset for fixed navbar height + buffer
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                        current = section.getAttribute('id');
-                    }
-                });
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // adjust offset if navbar height changes
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
     
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
-                });
+            // Also handle "Home" when near top of page
+            if (window.pageYOffset < 100) {
+                current = 'home';
             }
     
-            // Run on load and on scroll
-            window.addEventListener('scroll', setActiveLink);
-            setActiveLink(); // initial call
-        });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === '#' + current || href === current) {  // handle both #id and id
+                    link.classList.add('active');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', setActiveLink);
+        setActiveLink(); // initial call
+    });
     </script>
     <!-- Auto-close offcanvas menu on nav link click or scroll (mobile) -->
 <script>
