@@ -175,6 +175,38 @@ body {
     background-color: #fff;              /* Ensures clean white bg */
 }
 
+/* Floating Product of USA badge – bottom right */
+.product-usa-badge {
+    position: fixed;
+    bottom: 24px;               /* padding from bottom edge */
+    right: 24px;                /* padding from right edge */
+    z-index: 1050;              /* stays above most content */
+    max-width: 130px;           /* control size – adjust as needed */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.product-usa-badge img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;         /* optional soft corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover effect */
+.product-usa-badge:hover {
+    transform: scale(1.08);
+}
+
+/* Mobile adjustments – smaller size + less padding */
+@media (max-width: 576px) {
+    .product-usa-badge {
+        max-width: 90px;
+        bottom: 16px;
+        right: 16px;
+    }
+}
+
 
 /* Mobile adjustments */
 @media (max-width: 991.98px) {
